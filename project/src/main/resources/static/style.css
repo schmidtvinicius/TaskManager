@@ -1,0 +1,225 @@
+section {
+    background: #2579D9;
+    border-radius: 30px;
+    width: 275px;
+    height: 200px;
+    overflow: auto;
+    margin: 1%;
+}
+
+.formSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: white;
+    border-style: solid;
+    border-color: black;
+    height: fit-content;
+    overflow: visible;
+    width: 500px;
+}
+
+.Username{
+    width: 200px;
+    height: fit-content;
+    margin: 1%;
+    overflow: hidden;
+}
+
+.errorMessage{
+    background: #ff3448;
+    text-align: center;
+    height: fit-content;
+    margin-bottom: 5%;
+    margin-left: 1%;
+    overflow: visible;
+}
+
+.errorMessage > h1{
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 1%;
+}
+
+#membersList{
+    flex-flow: column nowrap;
+}
+
+@media (max-width: 800px) {
+    main {
+        flex-flow: column nowrap;
+    }
+    section {
+        width: 100%;
+    }
+    .Username{
+        width: 100%;
+    }
+    .formSection{
+        width: 100%;
+    }
+}
+
+h1 {
+    margin-left: 3%;
+    font-family: 'Roboto Bold 700', sans-serif;
+    color: #FFFFFF;
+}
+
+li {
+    font-family: 'Roboto Regular 400', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+body {
+    background: #FFFFFF;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background: #174d8b;
+    font-size: 18px;
+    font-family: 'Roboto Regular 400', sans-serif;
+    color: #FFFFFF;
+}
+
+header > nav{
+    margin: 1% 2%;
+    width: 15%;
+}
+
+button{
+    background-color: #2579D9;
+    background-repeat:no-repeat;
+    border: none;
+    border-radius: 30px;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: #FFFFFF;
+    text-align: right;
+    font-family: 'Roboto Regular 400', sans-serif;
+    font-size: 18px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: fit-content;
+    height: fit-content;
+}
+
+.deleteButton{
+    background-color: #ff3448;
+}
+
+#Signup_button{
+    font-family: 'Roboto Regular 400', sans-serif;
+    font-size: 18px;
+    margin-bottom: 5%;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+a{
+    color: #FFFFFF;
+}
+
+.addButton{
+    text-align: center;
+    height: fit-content;
+}
+
+.statusesList{
+    justify-content: space-evenly;
+}
+
+.formPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Roboto Regular 400', sans-serif;
+}
+
+input{
+    width: 60%;
+    font-family: 'Roboto Regular 400', sans-serif;
+    font-size: 18px;
+}
+
+select{
+    width: 60%;
+    font-family: 'Roboto Regular 400', sans-serif;
+    font-size: 18px;
+}
+
+#navSettings{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: center;
+}
+
+#logout{
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#Create_category{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2%;
+}
+
+form{
+    font-family: 'Roboto Regular 400', sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    margin: 3%;
+    width: 100%;
+    align-items: center;
+}
+
+#navSearch{
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Roboto Regular 400', sans-serif;
+    font-size: 18px;
+}
+
+#navSearch > input{
+    width: 100%;
+}
+
+.formTitle{
+    color: black;
+}
+
+#removeUser{
+    overflow: hidden;
+}
+
+.errorBody {
+    background: url("/images/robot-error-404.png") no-repeat;
+    background-size: 100%;
+    size: auto;
+}

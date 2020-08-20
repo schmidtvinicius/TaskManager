@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="formPage">
+    <section class="formSection">
+        <h1 class="formTitle">Create task</h1>
+        <form th:action="@{'/category/'+${category.title}+'/tasklist/'+${taskList.title}+'/'}" method="post">
+            Title:*<br/>
+            <input type="text" name="title" required><br/>
+            Description:<br/>
+            <input type="text" name="description"><br/>
+            Status:*<br/>
+            <select name="status" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option th:each="status:${statuses}" th:text="${status}" th:value="${status}"></option>
+            </select><br/>
+            Due:<br/>
+            <input type="date" name="dueDate">
+            <button class="addButton" type="submit" value="Submit" name="Create">Create</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

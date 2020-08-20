@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Planner</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="formPage">
+    <section class="formSection">
+        <form th:action="@{''}" method="post">
+            Title:*<br/>
+            <input type="text" name="title" required th:field="${task.title}"><br/>
+            Description:<br/>
+            <input type="text" name="description" th:field="${task.description}"><br/>
+            Status:*<br/>
+            <select name="status" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option th:each="status:${statuses}" th:text="${status}" th:value="${status}"></option>
+            </select><br/>
+            Due:<br/>
+            <input type="date" name="dueDate" th:field="${task.dueDate}">
+            <button type="submit">Save</button>
+        </form>
+        <form th:action="@{'/category/'+${categoryTitle}+'/tasklist/'+${taskListTitle}+'/'+${task.taskId}+'/delete/'}" method="post">
+            <button class="deleteButton" type="submit" value="Submit" name="Create">Delete</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

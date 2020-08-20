@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="formPage">
+    <section class="formSection">
+        <form th:action="@{'/settings'}" method="post">
+            First name:*<br>
+            <input type="text" name="firstName" th:field="${user.firstName}" required><br>
+            Last name:*<br>
+            <input type="text" name="lastName" th:field="${user.lastName}" required><br>
+            Email:*<br>
+            <input type="email" name="emailAddress" th:field="${user.emailAddress}" required><br>
+            Username:<br>
+            <input type="text" name="username" th:field="${user.username}" disabled><br>
+            <button type="submit">Save</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

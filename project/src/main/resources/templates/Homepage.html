@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Planner</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header th:replace="Header :: header"></header>
+    <main>
+        <section class="addButton">
+            <a th:href="@{'add/'}">
+                <h1>
+                    Add category
+                </h1>
+            </a>
+        </section>
+        <section th:each="category:${user.categoriesToArrayList()}">
+            <a th:href="@{${category.title}+'/tasklist/'}">
+                <h1 th:text="${category.title}"></h1>
+            </a>
+            <ul>
+                <li th:each="taskList:${category.taskListsToArrayList()}" th:text="${taskList.title}"></li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>

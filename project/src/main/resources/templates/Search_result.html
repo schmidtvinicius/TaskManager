@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header th:replace="Header :: header"></header>
+<main>
+    <section class="errorMessage" th:if="${errorMessage}">
+        <h1 th:text="${errorMessage}"></h1>
+    </section>
+    <section class="Username" th:each="username:${matchingUsernames}">
+        <h1 th:text="${username}"></h1>
+    </section>
+</main>
+</body>
+</html>

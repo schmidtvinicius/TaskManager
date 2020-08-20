@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header th:replace="Header :: header"></header>
+    <main id="membersList">
+        <section th:if="${taskList.isOwner(username)}" class="addButton">
+            <a th:href="@{'add/'}">
+                <h1>
+                    Add member
+                </h1>
+            </a>
+        </section>
+        <section class="Username">
+            <h1 th:text="${taskList.owner()}+' (owner)'"></h1>
+        </section>
+        <section class="Username" th:each="member:${taskList.membersAsArrayList()}">
+            <h1 th:text="${member.username}"></h1>
+            <form id="removeUser" th:if="${taskList.isOwner(username)}" th:action="@{'delete/?username='+${member.username}}" method="post">
+                <button class="deleteButton" type="submit">Remove</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

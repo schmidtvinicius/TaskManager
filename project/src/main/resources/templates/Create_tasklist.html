@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Planner</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="formPage">
+    <section class="formSection">
+        <h1 class="formTitle">Create task list</h1>
+        <form th:action="@{'/category/'+${categoryTitle}+'/tasklist/'}" method="post">
+            Title:* <br>
+            <input type="text" name="taskListTitle" required><br>
+            <button class="addButton" type="submit" name="Create">Create</button>
+        </form>
+        <section class="errorMessage" th:if="${errorMessage}">
+            <h1 th:text="${errorMessage}"></h1>
+        </section>
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Planner</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="formPage">
+    <section class="formSection">
+        <form th:action="@{'/signUp'}" method="post">
+            First name:*<br>
+            <input type="text" name="firstName" required><br>
+            Last name:*<br>
+            <input type="text" name="lastName" required><br>
+            Email:*<br>
+            <input type="email" name="emailAddress" required><br>
+            Username:*<br>
+            <input type="text" name="username" required><br>
+            Password:*<br>
+            <input type="password" name="password" required><br>
+            <button type="submit">Sign up</button>
+        </form>
+        <section class="errorMessage" th:if="${errorMessage}">
+            <h1 th:text="${errorMessage}"></h1>
+        </section>
+    </section>
+</main>
+</body>
+</html>

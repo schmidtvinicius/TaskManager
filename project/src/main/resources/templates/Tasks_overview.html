@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Planner</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header th:replace="Header :: header"></header>
+<main class="statusesList">
+    <section th:each="status:${statuses}">
+        <h1 th:text="${status}"></h1>
+        <ul>
+            <li th:each="task:${tasklist.tasksAsArrayList()}" th:if="*{task.status == status}">
+                <a th:href="@{${task.taskId}+'/edit'}" th:text="*{task.dueDate != null}? *{task.title+' (due: '+task.dueDate+')'} : ${task.title}"></a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <a th:href="@{'members/'}">
+            <h1>
+                Members
+            </h1>
+        </a>
+        <ul>
+            <li th:each="member:${tasklist.membersAsArrayList()}" th:text="*{member.username}"></li>
+        </ul>
+    </section>
+    <section class="addButton">
+        <a th:href="@{'add/'}">
+            <h1>
+                Add task
+            </h1>
+        </a>
+    </section>
+    <form th:if="${tasklist.isOwner(username)}" th:action="@{'delete/'}" method="post">
+        <button class="deleteButton" type="submit">Delete task list</button>
+    </form>
+</main>
+</body>
+</html>

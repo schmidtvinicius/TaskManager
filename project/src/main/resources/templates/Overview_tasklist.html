@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Planner</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header th:replace="Header :: header"></header>
+<main>
+    <section th:if="${category.title != 'Shared'}" class="addButton">
+        <a th:href="@{'add/'}">
+            <h1>
+                Add task list
+            </h1>
+        </a>
+    </section>
+    <section class="Tasklist" th:each="tasklist:${category.taskListsToArrayList()}">
+        <a th:href="@{${tasklist.title}+'/'}">
+            <h1 th:text="${tasklist.title}"></h1>
+        </a>
+        <ul>
+            <li th:each="task:${tasklist.tasksAsArrayList()}" th:text="${task.title}"></li>
+        </ul>
+    </section>
+    <form th:if="${category.title != 'Shared'}" th:action="@{'delete/'}" method="post">
+        <button class="deleteButton" type="submit">Delete category</button>
+    </form>
+</main>
+</body>
+</html>
