@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
+## Task Manager
 
-You can use the [editor on GitHub](https://github.com/schmidtvinicius/TaskManager/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is a web application I designed for my 'Web Applications' class during my first year. The objective of this application is to help people manage 'task lists' within different categories. Each task list contains a number of tasks that can be divided into three different statuses: 'To do', 'Doing' and 'Done'. Furthermore each task can have a due date. The categories and task lists can be managed by the owner of those. The owner can also add members to the task lists, so that they can work together on the task list. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Things I've learned with this project:
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/schmidtvinicius/TaskManager/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+	How to use the 'Flexbox' and 'Media queries' CSS features to make more responsive web pages;
+	How to make dynamic webpages using Thymeleaf conditionals and loops to display data from the model;
+	How to manage user sessions;
+	Basics of cookies;
