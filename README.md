@@ -4,7 +4,7 @@ This is a web application I designed for my 'Web Applications' class during my f
 
 ## Things I've learned with this project:
 
-	How to use the 'Flexbox' and 'Media queries' CSS features to make more responsive web pages;
-	How to make dynamic webpages using Thymeleaf conditionals and loops to display data from the model;
-	How to manage user sessions;
-	Basics of cookies;
+How to use the 'Flexbox' and 'Media queries' CSS features to make more responsive web pages;
+How to make dynamic webpages using Thymeleaf conditionals and loops to display data from the model;
+How to manage user sessions;
+Basics of cookies;
