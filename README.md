@@ -13,3 +13,11 @@ This is a web application I designed for my 'Web Applications' class during my f
 * How to make dynamic webpages using Thymeleaf conditionals and loops to display data from the model.
 * How to manage user sessions.
 * How to create and manage cookies using Spring Boot.
+
+## Screenshots:
+
+### Home page:
+![alt home](https://github.com/schmidtvinicius/TaskManager/blob/master/screenshots/home.png)
+
+### Home page with smaller screen size:
+![alt home_small](https://github.com/schmidtvinicius/TaskManager/blob/master/screenshots/home_small.png)
